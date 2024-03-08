@@ -11,7 +11,6 @@ contract MetaverseSupermarketScript is Script {
     function setUp() public {}
 
     function run() public {
-        // vm.startPrank(0x1733C691f9FCe28141476f2D1121ba11a7A3b61B);
         vm.startBroadcast();
         inflaStore.infla().approve(address(inflaStore), 10);
         OraclePrice memory oraclePrice = OraclePrice(block.number, 1);
